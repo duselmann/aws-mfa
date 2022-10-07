@@ -9,8 +9,10 @@ def log_error_and_exit(logger, message):
 
 def prompter():
     try:
-        console_input = raw_input
+        # PyLint will complain if unresolved
+        console_input = raw_input  # type: ignore
     except NameError:
-        console_input = input
+        # PyLint will complain if unresolved
+        console_input = input  # type: ignore
 
     return console_input
