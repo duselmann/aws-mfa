@@ -381,7 +381,6 @@ def get_credentials(short_term_name, lt_key_id, lt_access_key, args, config):
     logger.info(
         "Success! Your credentials will expire in %s seconds at: %s"
         % (args.duration, response['Credentials']['Expiration']))
-    sys.exit(0)
 
 
 def setup_logger(level=logging.DEBUG):
