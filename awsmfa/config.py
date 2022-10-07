@@ -13,7 +13,7 @@ from awsmfa.util import log_error_and_exit, prompter
 def initial_setup(logger, config, config_path):
     console_input = prompter()
 
-    profile_name = console_input('Profile name to [%s]: ' % ("default"))
+    profile_name = console_input('Profile name to [%s]: ' % "default")
     if profile_name is None or profile_name == "":
         profile_name = "default"
 
