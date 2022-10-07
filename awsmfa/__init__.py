@@ -1,12 +1,11 @@
 import argparse
-# PyLint will report one group of the following imports as an error when not found.
-# One will always be not found. Resolution is "type: ignore" annotation.
+
 try:
-    import configparser  # type: ignore
-    from configparser import NoOptionError, NoSectionError   # type: ignore
+    import configparser  # noqa
+    from configparser import NoOptionError, NoSectionError  # noqa
 except ImportError:
-    import ConfigParser as configparser  # type: ignore
-    from ConfigParser import NoOptionError, NoSectionError  # type: ignore
+    import ConfigParser as configparser  # noqa
+    from ConfigParser import NoOptionError, NoSectionError  # noqa
 import datetime
 import getpass
 import logging

@@ -1,8 +1,8 @@
 import getpass
 
 try:
-    import configparser
-    from configparser import NoOptionError, NoSectionError
+    import configparser  # noqa
+    from configparser import NoOptionError, NoSectionError  # noqa
 except ImportError:
     import ConfigParser as configparser  # noqa
     from ConfigParser import NoOptionError, NoSectionError  # noqa
