@@ -1,1 +1,14 @@
 boto3==1.24.88
+botocore==1.27.88
+
+# other referenced internal modules
+
+# argparse
+# codecs
+# configparser
+# datatime
+# getpass
+# logging
+# os
+# setuptools==65.4.1
+# sys
