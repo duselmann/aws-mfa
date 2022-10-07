@@ -108,7 +108,7 @@ def main():
         initial_setup(logger, configuration, AWS_CREDS_PATH)
         return
 
-    validate(args, configuration)
+    validate_and_refresh(args, configuration)
 
 
 def fetch_configuration(aws_creds_path):
@@ -122,7 +122,7 @@ def fetch_configuration(aws_creds_path):
     return configuration
 
 
-def validate(args, configuration):
+def validate_and_refresh(args, configuration):
     if not args.profile:
         if os.environ.get('AWS_PROFILE'):
             args.profile = os.environ.get('AWS_PROFILE')
