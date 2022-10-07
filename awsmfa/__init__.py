@@ -157,6 +157,8 @@ def validate(args, config):
                 (short_term_name, role_msg))
     reup_message = "Obtaining credentials for a new role or profile."
 
+    key_id = "missing"
+    access_key = "missing"
     try:
         key_id = config.get(long_term_name, 'aws_access_key_id')
         access_key = config.get(long_term_name, 'aws_secret_access_key')
@@ -294,6 +296,7 @@ def get_credentials(short_term_name, lt_key_id, lt_access_key, args, config):
         aws_secret_access_key=lt_access_key
     )
 
+    response = {}
     if args.assume_role:
 
         logger.info("Assuming Role - Profile: %s, Role: %s, Duration: %s",
