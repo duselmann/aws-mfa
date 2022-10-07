@@ -12,6 +12,10 @@ The concept behind **aws-mfa** is that there are 2 types of credentials:
 
 If you haven't yet enabled multi-factor authentication for AWS API access, check out the [AWS article](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_mfa_configure-api-require.html) on doing so.
 
+NOTE:
+I examined this project, line by line, to ensure that secrets are not compromised, exposed, or sent.
+The only communication of secrets is to aws via boto3 to refresh short term tokens. I did not
+examine all dependencies like the setuptools and logger modules for security.
 
 Installation:
 -------------
